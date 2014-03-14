@@ -4,13 +4,13 @@ screenshooter
 Command line tool in nodejs to take full-length screenshots of websites.
 
 
-# Install
+## Install
 
 Simply install with npm
 
     npm install screenshooter -g
 
-# Usage
+## Usage
 
 Taking a screenshot is super simple:
 
@@ -18,7 +18,7 @@ Taking a screenshot is super simple:
   
 This will take a screenshot of githubs page and save it to the current working directory
 
-# Options
+## Options
 
 Currently screenshooter only accepts to parameters:
 
