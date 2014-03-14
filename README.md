@@ -25,6 +25,6 @@ Currently screenshooter only accepts to parameters:
     screenshooter URL [-t]
   
 - The URL is mandatory. 
-- -t or --timeout is the amount of seconds it should wait until taking the screenshot
+- -t or --timeout is the amount of seconds it should wait until taking the screenshot. The default timeout is .5 seconds.
 
 Future releases will include setting upp the resolution, saving to PDF and some other smart things.
