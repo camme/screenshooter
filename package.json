@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/camme/screenshooter",
   "dependencies": {
-    "phantom": "^0.5.4",
-    "commander": "^2.1.0",
-    "slug": "^0.4.2"
+    "phantom": "~0.5.4",
+    "commander": "~2.0.0",
+    "slug": "~0.4.2"
   }
 }
