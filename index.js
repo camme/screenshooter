@@ -7,14 +7,43 @@ var slug = require('slug');
 var path = require('path');
 
 program
-  .version('0.0.1')
-  .option('-t, --timeout [timeout]', 'Set the time to wait until the screenshot is taken. Default is 2 seconds')
-  .parse(process.argv);
+    .version('0.3.2')
+    .usage(' [options] url')
+    .option('-t, --timeout [timeout]', 'Set the time to wait until the screenshot is taken. Default is .5 seconds')
+
+    program.on('--help', function(){
+        console.log('  Example:');
+        console.log('');
+        console.log('    Take a screenshot of www.1001.io:');
+        console.log('    $ screenshooter http://www.1000.io');
+        console.log('');
+        console.log('    Take a screenshot of www.1001.io but wait at least 5 seconds:');
+        console.log('    $ screenshooter http://www.1000.io -t 6');
+        console.log('');
+    });
+
+program.parse(process.argv);
 
 
 var timeout = program.timeout ? program.timeout : 0.5;
 
 function takeScreenshot(url, timeout) {
+
+    if (!url) {
+
+        console.log('');
+        console.log('  How to use:');
+        console.log('');
+        console.log('    Take a screenshot of www.1001.io:');
+        console.log('    $ screenshooter http://www.1000.io');
+        console.log('');
+        console.log('    Take a screenshot of www.1001.io but wait at least 5 seconds:');
+        console.log('    $ screenshooter http://www.1000.io -t 6');
+        console.log('');
+
+        return;
+
+    }
 
   phantom.create(function(ph) {
 
